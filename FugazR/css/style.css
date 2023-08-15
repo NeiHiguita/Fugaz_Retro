@@ -1,0 +1,285 @@
+* {
+  font-family: "Cormorant Garamond Bold";
+  padding: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+/* -------------------------------------cabecera -------------------------------*/
+.barraSup {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  height: 27px;
+  width: 100%;
+}
+.centered {
+  text-align: center;
+  flex: 1;
+}
+.bienvenido {
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  margin: auto;
+  margin-left: 100px;
+  text-align: center;
+}
+.icons {
+  align-items: center;
+  margin-top: 2px;
+  margin-inline-end: 15px;
+  padding: 15px;
+  font-size: 1px;
+}
+
+.icons a {
+  margin-right: 10px;
+}
+
+/*--------------------------- menu de buzqueda ----------------------------*/
+.fr {
+  font-size: 30px;
+  display: block;
+  font-family: "Cormorant Garamond";
+  white-space: nowrap;
+  border-right: 2px solid;
+  width: 16ch;
+  animation: typing 2s steps(20), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.menu {
+  display: flex;
+  margin-top: 10px;
+  width: 1000px;
+  margin: 10px auto;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background: #e2b091;
+  padding: 5px 20px;
+}
+
+.busqueda {
+  margin-right: 80px;
+  max-width: 900px;
+  height: 25px;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.635);
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.campo-busqueda {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  outline: none;
+}
+
+.campo-busqueda::placeholder {
+  opacity: 1;
+  color: #000000cc;
+}
+
+.campo-busqueda:focus {
+  background-color: #ffffff00;
+}
+
+.campo-busqueda:active,
+.campo-busqueda:hover {
+  background-color: #f8f8f800;
+}
+
+.campo-busqueda:focus + .icono-lupa {
+  background-color: #ffffff00;
+  color: #000000;
+}
+
+.icono-lupa {
+  padding: 8px;
+  border-radius: 30px;
+  margin-left: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0);
+}
+
+.icono-lupa box-icon {
+  margin: auto;
+  color: #000000;
+}
+
+.iconos {
+  display: flex;
+  align-items: center;
+  margin-left: 370px;
+  margin-top: -35px;
+}
+
+.icono {
+  padding: 5px;
+}
+/*--------------categorias----------------------*/
+.ListaMenu {
+  background-color: #eabcac;
+  margin: -18px auto;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.categorias {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+}
+
+.categorias li {
+  margin: 0;
+  padding: 0 40px;
+  border-right: 1px solid #000000;
+}
+
+.categorias li:last-child {
+  border-right: none;
+}
+
+.categorias a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+.categorias a:hover {
+  font-family: "Cormorant Garamond Bold";
+  color: #000000;
+}
+
+.menu-btn {
+  display: none;
+}
+/*--------------------------diseño responsive---------------------------------*/
+/*--------cabecera-------------*/
+@media screen and (max-width: 1040px) {
+  .barraSup {
+    background-color: #000000;
+    flex-direction: row;
+    display: grid;
+    height: 100px;
+    width: 1040px;
+  }
+  .bienvenido {
+    margin-left: 30px;
+    font-size: 30px;
+    margin-top: 5px;
+  }
+
+  .icons {
+    margin-top: 2px;
+    flex-direction: row;
+    text-align: center;
+    margin-top: -13px;
+    margin-inline-end: 0px;
+  }
+  .icons img {
+    width: 40px;
+    margin-top: 10px;
+    padding: 0 20px;
+  }
+
+  .icons a {
+    margin: 0 10px;
+  }
+  /*----------busqueda-------------*/
+  .menu {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 150px;
+  }
+  .fr {
+    display: grid;
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+  }
+  .busqueda {
+    width: 450px;
+    margin: auto 20px;
+    height: 50px;
+  }
+  .iconos {
+    margin-left: 500px;
+  }
+  .campo-busqueda {
+    margin-top: 5px;
+  }
+  .campo-busqueda::placeholder {
+    font-size: 25px;
+  }
+  .iconos img {
+    height: 65px;
+    margin-right: 0px;
+    margin-top: -30px;
+  }
+  /*--------categorias------------*/
+  .ListaMenu {
+    width: 1040px;
+  }
+  .categorias {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .menu-btn {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 40px;
+  }
+
+  .menu-btn.active + .categorias {
+    display: flex;
+  }
+  .categorias li {
+    margin: 0;
+    margin-left: 500px;
+    padding: 5px 40px;
+    border: 1px solid #00000057;
+    width: 240px;
+  }
+  .categorias li:last-child {
+    border-right: 1px solid #00000057;
+  }
+  .categorias a {
+    font-size: 50px;
+  }
+}
