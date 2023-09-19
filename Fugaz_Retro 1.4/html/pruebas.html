@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /* Resetear estilos de margen y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.hamburger-menu {
+    display: none; /* Ocultar por defecto en pantallas mayores a 1040px */
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+}
+.cat{
+    display: flex;
+}
+.cat li{
+    list-style: none;
+    text-decoration: none;
+}
+.cat li a{
+    text-decoration: none;
+    border: 2px solid #fff;
+    color: aqua;
+}
+/* Estilos para pantallas menores a 1040px */
+@media screen and (max-width: 1040px) {
+    .nav-menu {
+        display: none; /* Ocultar el menú horizontal */
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        right: 0px;
+        background-color: #333;
+        width: 200px;
+        padding: 20px;
+        border-radius: 0px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-menu.active {
+        display: flex; /* Mostrar el menú al hacer clic en el ícono de hamburguesa */
+    }
+
+    .hamburger-menu {
+        display: block;
+        margin-right: 30px; /* Mostrar el ícono de hamburguesa */
+    }
+    .cat{
+        display: block;
+    }
+    .cat li{
+        padding-top: 15px;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <div class="hamburger-menu">
+            <img src="/icons/menu-regular-24.png" alt="">
+        </div>
+        <nav class="nav-menu">
+            <ul class="cat">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Contenido de la página -->
+    </main>
+    <script type="text/javascript">
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.nav-menu');
+    
+        hamburgerMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
