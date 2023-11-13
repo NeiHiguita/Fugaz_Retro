@@ -400,18 +400,7 @@
   color: #000;
 }*/
 /*--------------------------------footer---------------------*/
-.footer{
-  height: 300px;
-  width: 1000px;
-  display: flex;
-  margin-top: 200px;
-  background: #E2B091;
-}
-.infog{
-  background-color: #919191;
-  height: 300px;
-  width: 400px;
-}
+
 /*--------------------------diseño responsive---------------------------------*/
 /*--------cabecera-------------*/
 @media screen and (max-width: 1040px) {
